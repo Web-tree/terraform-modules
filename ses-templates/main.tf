@@ -1,6 +1,6 @@
 data "local_file" "html_files" {
   for_each = fileset(var.templates_dir, "*.html")
-  filename = "${path.root}/${var.templates_dir}/${each.value}"
+  filename = "${path.cwd}/${var.templates_dir}/${each.value}"
 }
 
 resource "aws_ses_template" "email_templates" {
