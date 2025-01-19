@@ -1,4 +1,4 @@
 module "ses_templates" {
   source = "../"
-  templates_dir = "./email-templates"
+  templates_dir = "${path.module}/email-templates"
 }
